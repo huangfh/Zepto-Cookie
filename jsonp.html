@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="">
+
+	<script type="text/javascript">
+
+		/*var div = document.getElementById('div1');
+		var iterator = document.createNodeIterator('div',NodeFilter.SHOW_ELEMENT,null,false);
+		var node = iterator.nextNode();
+		while(node!=null){
+			alert(node.tagName);
+			node=node.nextNode();
+		}*/
+		var arr = [1, 5,2, 2, 3, 4, 5, 6, 6];
+
+		function getArray(a) {
+		 var hash = {},
+		     len = a.length,
+		     result = [];
+
+		 for (var i = 0; i < len; i++){
+		     if (!hash[a[i]]){
+		         hash[a[i]] = true;
+		         result.push(a[i]);
+		     } 
+		 }
+		 return result;
+		}
+
+		console.log(getArray(arr)); // 输出[1， 2， 3， 4， 5， 6]
+
+		
+		var a=[8,2,5,9,6,4,7];
+
+		function Bubble(a){
+			for (var i=0;i<a.length;i++){
+				var temp;
+				var flag = false;
+				for (var j=0;j<a.length-i;j++){
+					
+					if(a[j]>a[j+1]){
+						temp = a[j];
+						a[j]=a[j+1];
+						a[j+1]=temp;
+						flag=true;
+
+					}
+				}
+				console.log(a);
+				console.log(flag);
+				if(flag == false){
+					return ;
+				}
+				
+			}
+		}
+		Bubble(a);
+
+		
+		
+
+		
+		//console.log(once().hello(2,2)) ;
+		//console.log(once().hello(2,3)) ;
+       function jsonpCallback(result)  
+        {  
+           console.log(result.data.post[0]);  
+     	}  
+        </script>  
+    <!--<script type="text/javascript" src="http://bar.qq.com/star/10054/post/rank?callback=jsonpCallback">
+
+	</script>-->
+</head>
+<body>
+	
+</body>
+</html>
